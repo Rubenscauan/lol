@@ -1,49 +1,61 @@
 package com.projeto.persistencia.Models;
 
-public class Champion{
+import java.io.Serializable;
+
+public class Champion implements Serializable{
+    private int id;
     private String name;
-    private String creationDate;
-    private String function;
+    private String position;
+    private String species;
     private String range;
-    private String Q;
-    private String W;
-    private String E;
-    private String ultimate;
+    private String region;
+    private String resource;
+    private String creationDate;
+
+    public Champion(){};
     
-    public Champion(String name, String creationDate, String function, String range, String q, String w, String e, String ultimate) {
+    public Champion(int id, String name, String position, String species, String range, String region, String resource,String creationDate) {
+        this.id = id;
         this.name = name;
-        this.creationDate = creationDate;
-        this.function = function;
+        this.position = position;
+        this.species = species;
         this.range = range;
-        Q = q;
-        W = w;
-        E = e;
-        this.ultimate = ultimate;
-    }
-    
-    @Override
-    public String toString() {
-        return "Champion [name=" + name + ", function=" + function + ", Q=" + Q + ", W=" + W + ", E=" + E
-                + ", ultimate=" + ultimate + "]";
+        this.region = region;
+        this.resource = resource;
+        this.creationDate = creationDate;
     }
 
+    
+
+    @Override
+    public String toString() {
+        return "Champion [id=" + id + ", name=" + name + ", position=" + position + ", species=" + species + ", range="
+                + range + ", region=" + region + ", recurso=" + resource + ", creationDate=" + creationDate + "]";
+    }
+
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
     public String getName() {
         return name;
     }
     public void setName(String name) {
         this.name = name;
     }
-    public String getCreationDate() {
-        return creationDate;
+    public String getPosition() {
+        return position;
     }
-    public void setCreationDate(String creationDate) {
-        this.creationDate = creationDate;
+    public void setPosition(String position) {
+        this.position = position;
     }
-    public String getFunction() {
-        return function;
+    public String getSpecies() {
+        return species;
     }
-    public void setFunction(String function) {
-        this.function = function;
+    public void setSpecies(String species) {
+        this.species = species;
     }
     public String getRange() {
         return range;
@@ -51,32 +63,29 @@ public class Champion{
     public void setRange(String range) {
         this.range = range;
     }
-    public String getQ() {
-        return Q;
+    public String getRegion() {
+        return region;
     }
-    public void setQ(String q) {
-        Q = q;
+    public void setRegion(String region) {
+        this.region = region;
     }
-    public String getW() {
-        return W;
+    
+    public String getCreationDate() {
+        return creationDate;
     }
-    public void setW(String w) {
-        W = w;
-    }
-    public String getE() {
-        return E;
-    }
-    public void setE(String e) {
-        E = e;
-    }
-    public String getUltimate() {
-        return ultimate;
-    }
-    public void setUltimate(String ultimate) {
-        this.ultimate = ultimate;
+    public void setCreationDate(String creationDate) {
+        this.creationDate = creationDate;
     }
 
+    public String getResource() {
+        return resource;
+    }
 
+    public void setResource(String resource) {
+        this.resource = resource;
+    }
+    
+    
     
 
 }

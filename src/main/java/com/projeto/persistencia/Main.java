@@ -3,10 +3,11 @@ package com.projeto.persistencia;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        while(true){
+        while (true) {
             System.out.println("Menu:");
             System.out.println("1: Inserir entidade no arquivo CSV");
             System.out.println("2: Mostrar a quantidade de entidades existentes no arquivo CSV");
@@ -19,14 +20,14 @@ public class Main {
 
             switch (escolha) {
                 case "1":
-                    InserirEntidade.main(); // Chama o método para inserir entidade
+                    InserirEntidade.main(scanner); // Chama o método para inserir entidade
                     break;
 
+                case "6":
+                    scanner.close();
+                    System.exit(0); // Encerra o programa
+                    break;
             }
-            scanner.close();
-            break;
         }
-
     }
 }
-
