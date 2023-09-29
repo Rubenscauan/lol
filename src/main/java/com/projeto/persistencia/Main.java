@@ -23,6 +23,10 @@ public class Main {
                     InserirEntidade.main(scanner); // Chama o método para inserir entidade
                     break;
 
+                case "2":
+                    ContarEntidades.main();
+                    break; 
+                    
                 case "6":
                     scanner.close();
                     System.exit(0); // Encerra o programa
