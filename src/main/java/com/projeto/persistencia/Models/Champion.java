@@ -2,6 +2,8 @@ package com.projeto.persistencia.Models;
 
 import java.io.Serializable;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+
 public class Champion implements Serializable{
     private int id;
     private String name;
@@ -39,6 +41,7 @@ public class Champion implements Serializable{
     public void setId(int id) {
         this.id = id;
     }
+    @JacksonXmlProperty(localName = "Name")
     public String getName() {
         return name;
     }

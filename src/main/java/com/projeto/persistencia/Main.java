@@ -1,10 +1,12 @@
 package com.projeto.persistencia;
 
+
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
@@ -25,7 +27,10 @@ public class Main {
 
                 case "2":
                     ContarEntidades.main();
-                    break; 
+                    break;
+
+                case "3":
+                    ConverterDados.main();
                     
                 case "6":
                     scanner.close();
