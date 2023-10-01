@@ -31,6 +31,15 @@ public class Main {
 
                 case "3":
                     ConverterDados.main();
+                    break;
+
+                case "4":
+                    CompactarCSV.main();
+                    break;
+
+                case "5":
+                    MostrarHash256.main();    
+                    break;
                     
                 case "6":
                     scanner.close();
